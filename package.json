@@ -1,0 +1,16 @@
+{
+  "name": "tistory-comment-notify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.30.0",
+    "slack-node": "^0.1.8"
+  }
+}

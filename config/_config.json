@@ -1,0 +1,10 @@
+{
+    "slack": {
+        "webhookUri" : "",
+        "channel" : "#",
+        "userName": ""
+    },
+    "tistory": {
+        "url": ""
+    }
+}

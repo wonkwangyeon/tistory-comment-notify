@@ -11,7 +11,7 @@ module.exports = {
         slack.webhook({
             channel: process.env.CHANNEL,
             username: process.env.USER_NAME,
-            text: JSON.stringify(text)	//텍스트
+            text: JSON.stringify(text)
         }, function (err, response) {
             console.log(response);
         });

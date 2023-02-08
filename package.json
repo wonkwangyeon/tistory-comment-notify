@@ -1,17 +1,26 @@
 {
   "name": "tistory-comment-notify",
   "version": "1.0.0",
-  "description": "",
+  "description": "tistory square skin comment notify",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [ "tistory" ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
     "playwright": "^1.30.0",
     "slack-node": "^0.1.8"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wonkwangyeon/tistory-comment-notify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wonkwangyeon/tistory-comment-notify/issues"
+  },
+  "homepage": "https://github.com/wonkwangyeon/tistory-comment-notify/"
 }

@@ -1,16 +1,16 @@
 const Slack = require('slack-node');
-const config = require('../config/config.json')['slack']
+
 
 module.exports = {
 
     sendSlack: function (text) {
         
         const slack = new Slack();
-        slack.setWebhook(config.webhookUri);
+        slack.setWebhook(process.env.WEBHOOK_URI);
 
         slack.webhook({
-            channel: config.channel,
-            username: config.userName,
+            channel: process.env.CHANNEL,
+            username: process.env.USER_NAME,
             text: JSON.stringify(text)	//텍스트
         }, function (err, response) {
             console.log(response);

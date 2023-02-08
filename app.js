@@ -1,11 +1,12 @@
+require("dotenv").config();
 const slack = require('./slack/slack');
-const config = require('./config/config.json')['tistory']
 const { chromium } = require('playwright');
+
 
 (async () => {
     const browser = await chromium.launch();
     const page = await browser.newPage();
-    await page.goto(config.url);
+    await page.goto(process.env.URL);
 
     let h = new Date().getHours();
     let commentArr = [];
@@ -31,7 +32,8 @@ const { chromium } = require('playwright');
         }
     }
 
-    slack.sendSlack(commentArr)
+    if (commentArr.length > 0)
+        slack.sendSlack(commentArr)
 
     await browser.close();
 })();

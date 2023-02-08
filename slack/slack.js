@@ -10,10 +10,10 @@ module.exports = {
 
         slack.webhook({
             channel: process.env.CHANNEL,
-            username: process.env.USER_NAME,
+            username: '#'+process.env.USER_NAME,
             text: JSON.stringify(text)
         }, function (err, response) {
-            console.log(response);
+
         });
     }
 }

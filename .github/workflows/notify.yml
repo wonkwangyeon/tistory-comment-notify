@@ -25,6 +25,6 @@ jobs:
       run: npm run start
       env:
         WEBHOOK_URI: ${{ secrets.WEBHOOK_URI }}
-        CHANNEL: ${{secrets.CHANNEL }}
-        USER_NAME: ${{secrets.USER_NAME }}
+        CHANNEL: ${{ secrets.CHANNEL }}
+        USER_NAME: ${{ secrets.USER_NAME }}
         URL: ${{ secrets.URL }}

@@ -31,7 +31,11 @@ const { chromium } = require('playwright');
             break;
         }
     }
-
+    console.log(commentArr)
+    console.log(process.env.URL)
+    console.log(process.env.WEBHOOK_URI)
+    console.log(process.env.CHANNEL)
+    console.log(process.env.USER_NAME)
     if (commentArr.length > 0)
         await slack.sendSlack(commentArr)
 

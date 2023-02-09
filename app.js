@@ -33,7 +33,7 @@ const { chromium } = require('playwright');
     }
 
     if (commentArr.length > 0)
-        slack.sendSlack(commentArr)
+        await slack.sendSlack(commentArr)
 
     await browser.close();
 })();

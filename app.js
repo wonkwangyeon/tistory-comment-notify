@@ -9,6 +9,7 @@ const { chromium } = require('playwright');
     await page.goto(process.env.URL);
 
     let h = new Date().getHours();
+    console.log(h)
     let commentArr = [];
     for (const commentList of await page.locator('#recentComments').getByRole('listitem').all()) {
 
@@ -16,7 +17,7 @@ const { chromium } = require('playwright');
         const titleText = await commentList.getByRole('link').getAttribute('title');
         const titleDate = titleText.split("〃")[1]
         let commentDate = titleDate.split(":");
-
+        console.log("test1")
         if (commentDate.length > 1) {
             if (commentDate[0] >= h && commentDate[0] < h + 1) {
                 let comment = {

@@ -6,7 +6,7 @@
 # Features
 > 월 ~ 금 09~18시 의 59분에 실행된다.
 
-티스토리 squre skin 기준으로 한시간마다 좌측의 최근 댓글 수집 후 Slack 채널로 알림 발송
+티스토리 square  skin 기준으로 한시간마다 좌측의 최근 댓글 수집 후 Slack 채널로 알림 발송
 
 # How to use
 ## Develop

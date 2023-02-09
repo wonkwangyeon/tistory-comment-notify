@@ -11,7 +11,8 @@ const { chromium } = require('playwright');
     let h = new Date().getHours();
     if (process.env.NODE_ENV == "production") {
         h = h + 9;
-        console.log(h)
+        if (h >= 24)
+            h = h - 24;
     }
     let commentArr = [];
     for (const commentList of await page.locator('#recentComments').getByRole('listitem').all()) {

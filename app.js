@@ -9,7 +9,9 @@ const { chromium } = require('playwright');
     await page.goto(process.env.URL);
 
     let h = new Date().getHours();
-    console.log(h)
+    if (process.env.NODE_ENV == "production") {
+        h = h + 9;
+    }
     let commentArr = [];
     for (const commentList of await page.locator('#recentComments').getByRole('listitem').all()) {
 
@@ -17,7 +19,7 @@ const { chromium } = require('playwright');
         const titleText = await commentList.getByRole('link').getAttribute('title');
         const titleDate = titleText.split("〃")[1]
         let commentDate = titleDate.split(":");
-        console.log("test1")
+
         if (commentDate.length > 1) {
             if (commentDate[0] >= h && commentDate[0] < h + 1) {
                 let comment = {
@@ -32,11 +34,7 @@ const { chromium } = require('playwright');
             break;
         }
     }
-    console.log(commentArr)
-    console.log(process.env.URL)
-    console.log(process.env.WEBHOOK_URI)
-    console.log(process.env.CHANNEL)
-    console.log(process.env.USER_NAME)
+
     if (commentArr.length > 0)
         await slack.sendSlack(commentArr)
 

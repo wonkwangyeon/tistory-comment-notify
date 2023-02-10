@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
   schedule:
-    - cron: "59 18-3 * * 1-5"
+    - cron: "59 18-23,0-3 * * 1-5"
 
 jobs:
   tistory-comment-notify:

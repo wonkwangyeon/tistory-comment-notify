@@ -12,7 +12,7 @@ const { chromium } = require('playwright');
     let time = new Date()
     console.log(time)
     if (process.env.NODE_ENV == "production") {
-        h = h + 9;
+        h = h + 8;
         if (h >= 24)
             h = h - 24;
         console.log(h)

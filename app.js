@@ -15,6 +15,7 @@ const { chromium } = require('playwright');
         h = h + 9;
         if (h >= 24)
             h = h - 24;
+        console.log(h)
     }
     
     let commentArr = [];

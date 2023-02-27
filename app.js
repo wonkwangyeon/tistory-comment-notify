@@ -9,7 +9,8 @@ const { chromium } = require('playwright');
     await page.goto(process.env.URL);
 
     let h = new Date().getHours();
-    
+    let time = new Date()
+    console.log(time)
     if (process.env.NODE_ENV == "production") {
         h = h + 9;
         if (h >= 24)
